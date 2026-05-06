@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Irha ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#05010d;
+overflow-x:hidden;
+color:white;
+}
+
+/* BACKGROUND */
+
+.bg{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top right,#ff00aa55,transparent),
+radial-gradient(circle at bottom left,#7a00ff66,transparent),
+#05010d;
+z-index:-5;
+}
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-4;
+}
+
+.stars span{
+position:absolute;
+width:3px;
+height:3px;
+background:white;
+border-radius:50%;
+animation:blink 2s infinite alternate;
+}
+
+@keyframes blink{
+from{opacity:0.2;}
+to{opacity:1;}
+}
+
+/* SECTION */
+
+section{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:40px 20px;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+/* TITLES */
+
+.title{
+font-size:4rem;
+background:linear-gradient(90deg,#ff5fd2,#fff,#ff9bf0);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:25px;
+}
+
+.text{
+font-size:1.4rem;
+line-height:2.2;
+max-width:900px;
+color:#ffe6fb;
+}
+
+/* BUTTON */
+
+.btn{
+margin-top:40px;
+padding:18px 42px;
+border:none;
+border-radius:60px;
+background:linear-gradient(45deg,#ff009d,#ff66d9);
+color:white;
+font-size:1.2rem;
+font-weight:700;
+cursor:pointer;
+transition:0.4s;
+box-shadow:0 0 25px rgba(255,0,157,0.5);
+animation:pulse 2s infinite;
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
+
+/* FLOATING HEARTS */
+
+.hearts span{
+position:absolute;
+bottom:-100px;
+font-size:25px;
+animation:float 8s linear infinite;
+color:#ff4fd8;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+10%{
+opacity:1;
+}
+100%{
+transform:translateY(-1200px) rotate(720deg);
+opacity:0;
+}
+}
+
+/* PARTY */
+
+.party span{
+position:absolute;
+top:-100px;
+font-size:28px;
+animation:fall 6s linear infinite;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px) rotate(0deg);
+opacity:1;
+}
+100%{
+transform:translateY(1200px) rotate(720deg);
+opacity:0;
+}
+}
+
+/* PHOTO CARDS */
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+margin-top:50px;
+}
+
+.card{
+width:280px;
+height:390px;
+border-radius:30px;
+overflow:hidden;
+position:relative;
+animation:updown 4s infinite ease-in-out;
+box-shadow:0 0 35px rgba(255,255,255,0.15);
+}
+
+.card:nth-child(2){
+animation-delay:1s;
+}
+
+.card:nth-child(3){
+animation-delay:2s;
+}
+
+@keyframes updown{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-18px);}
+100%{transform:translateY(0px);}
+}
+
+.card img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.overlay{
+position:absolute;
+bottom:0;
+width:100%;
+padding:18px;
+background:linear-gradient(transparent,#000);
+font-size:1.1rem;
+}
+
+/* LOVE CARDS */
+
+.love-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+width:100%;
+max-width:1000px;
+margin-top:40px;
+}
+
+.love-card{
+padding:30px;
+background:rgba(255,255,255,0.08);
+border-radius:25px;
+backdrop-filter:blur(12px);
+font-size:1.2rem;
+line-height:1.8;
+}
+
+/* CHAT */
+
+.chat{
+margin-top:40px;
+width:100%;
+max-width:700px;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.msg{
+padding:18px 22px;
+border-radius:25px;
+font-size:1.2rem;
+max-width:80%;
+line-height:1.8;
+}
+
+.left{
+align-self:flex-start;
+background:#1f1133;
+}
+
+.right{
+align-self:flex-end;
+background:#ff009d;
+}
+
+/* LETTER */
+
+.letter{
+margin-top:40px;
+padding:40px;
+max-width:900px;
+background:rgba(255,255,255,0.08);
+border-radius:35px;
+backdrop-filter:blur(14px);
+font-size:1.3rem;
+line-height:2.3;
+color:#ffe8fb;
+}
+
+/* FINAL */
+
+.final{
+font-size:5rem;
+background:linear-gradient(90deg,#ff5fd2,#fff,#ff9bf0);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.title{
+font-size:2.8rem;
+}
+
+.text{
+font-size:1.15rem;
+}
+
+.card{
+width:90%;
+max-width:320px;
+}
+
+.msg{
+font-size:1rem;
+}
+
+.letter{
+font-size:1.08rem;
+padding:28px;
+}
+
+.final{
+font-size:3rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg"></div>
+
+<div class="stars"></div>
+
+<!-- PAGE 1 -->
+
+<section>
+
+<div class="hearts">
+<span style="left:10%;animation-delay:0s;">❤</span>
+<span style="left:30%;animation-delay:2s;">❤</span>
+<span style="left:50%;animation-delay:4s;">❤</span>
+<span style="left:70%;animation-delay:1s;">❤</span>
+<span style="left:90%;animation-delay:3s;">❤</span>
+</div>
+
+<h1 class="title">Hey Irha ✨</h1>
+
+<p class="text">
+Ek chota sa surprise hai... 😭❤️<br>
+But warning ⚠️<br>
+Andar bohot zyada cuteness aur thoda hidden pyaar ho sakta hai 👀✨
+</p>
+
+<a href="#page2">
+<button class="btn">Enter Carefully 🎁</button>
+</a>
+
+</section>
+
+<!-- PAGE 2 -->
+
+<section id="page2">
+
+<h1 class="title">Loading...</h1>
+
+<p class="text">
+Initializing cutest person on earth 😭💖
+</p>
+
+</section>
+
+<!-- PAGE 3 -->
+
+<section>
+
+<div class="party">
+<span style="left:5%;animation-delay:0s;">🎉</span>
+<span style="left:15%;animation-delay:2s;">✨</span>
+<span style="left:25%;animation-delay:1s;">🎊</span>
+<span style="left:35%;animation-delay:3s;">💖</span>
+<span style="left:50%;animation-delay:0s;">🎉</span>
+<span style="left:65%;animation-delay:2s;">✨</span>
+<span style="left:75%;animation-delay:1s;">💖</span>
+<span style="left:90%;animation-delay:4s;">🎊</span>
+</div>
+
+<h1 class="title">Happy Birthday Irha 👑❤️</h1>
+
+<p class="text">
+Aaj officially duniya aur bhi zyada pretty ho gayi 😭✨
+</p>
+
+</section>
+
+<!-- PAGE 4 -->
+
+<section>
+
+<h1 class="title">The Prettiest Girl Ever 💖</h1>
+
+<div class="gallery">
+
+<div class="card">
+<img src="photo1.jpg">
+<div class="overlay">Ye smile illegal honi chahiye 😭❤️</div>
+</div>
+
+<div class="card">
+<img src="photo2.jpg">
+<div class="overlay">Too pretty yaar ✨</div>
+</div>
+
+<div class="card">
+<img src="photo3.jpg">
+<div class="overlay">Princess vibes only 👑</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- PAGE 5 -->
+
+<section>
+
+<h1 class="title">Why Aap Special Ho 🌸</h1>
+
+<div class="love-grid">
+
+<div class="love-card">
+💖 Aapki smile literally mood fresh kar deti hai
+</div>
+
+<div class="love-card">
+👀 Aapka attitude cute bhi hai aur dangerous bhi
+</div>
+
+<div class="love-card">
+✨ Aapka message aate hi stupid si smile aa jati hai
+</div>
+
+<div class="love-card">
+🌸 Honestly... aap mere liye bohot special ho
+</div>
+
+</div>
+
+</section>
+
+<!-- PAGE 6 -->
+
+<section>
+
+<h1 class="title">Average Conversation 😭</h1>
+
+<div class="chat">
+
+<div class="msg left">
+Aap cute ho 😭❤️
+</div>
+
+<div class="msg right">
+Shut upppp 😭
+</div>
+
+<div class="msg left">
+Sach bol raha hoon 👀
+</div>
+
+<div class="msg right">
+Aap bhi acche ho 😭✨
+</div>
+
+<div class="msg left">
+Bas acche...? 😭
+</div>
+
+</div>
+
+</section>
+
+<!-- PAGE 7 -->
+
+<section>
+
+<h1 class="title">Secret Letter 💌</h1>
+
+<div class="letter">
+
+Irhaaaa 😭❤️<br><br>
+
+Sach bolu...?  
+Aap itni cute kyun ho yaar 😭✨<br><br>
+
+Matlab jab bhi aapka message aata hai na,
+automatic stupid si smile aa jati hai 😭💖<br><br>
+
+Aur aapki smile...
+dangerous level cute hai 😤❤️<br><br>
+
+Waise toh hum bestfriends hain,
+but honestly aap mere liye thodi zyada special ho 🌸<br><br>
+
+Bas hamesha aise hi khush rehna,
+smile karte rehna,
+aur mujhe ignore mat karna 😭✨<br><br>
+
+Aur haan...
+aaj ke din officially aap aur bhi zyada pretty lag rahi ho 👀❤️<br><br>
+
+Happy Birthdayyyy Princess 👑🎂✨<br><br>
+
+— Suraj 💖
+
+</div>
+
+</section>
+
+<!-- PAGE 8 -->
+
+<section>
+
+<h1 class="final">Thank You For Existing ❤️</h1>
+
+<p class="text" style="margin-top:30px;">
+Aap genuinely meri life ke cutest parts mein se ek ho ✨<br><br>
+
+Aur honestly...<br>
+Aapko smile karte dekhna bohot accha lagta hai 😭💖
+</p>
+
+<button class="btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+Replay Memories ✨
+</button>
+
+</section>
+
+<audio autoplay loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+<script>
+
+/* STARS */
+
+let stars=document.querySelector(".stars");
+
+for(let i=0;i<250;i++){
+
+let star=document.createElement("span");
+
+star.style.left=Math.random()*100+"%";
+star.style.top=Math.random()*100+"%";
+
+star.style.animationDelay=Math.random()*3+"s";
+
+stars.appendChild(star);
+
+}
+
+</script>
+
+</body>
+</html>
